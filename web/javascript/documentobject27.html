@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title></title>
+        <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            const imgs = document.querySelectorAll('img')
+
+            imgs.forEach((img)=> {
+                img.addEventListener('contextmenu', (event)=> {
+                    event.preventDefault()
+                })
+            })
+        })            
+        </script>
+    </head>
+    <body> 
+        <img src="C:\web\javascript\images\1.jpg" alt="강아지"> 
+        <img src="C:\web\javascript\images\3.jpg" alt="강아지">
+
+    </body>
+</html>

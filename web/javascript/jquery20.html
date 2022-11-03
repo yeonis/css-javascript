@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const width = 460;
+            const height = 300;
+            let current = 0;
+            
+            $('.summer').slick();
+
+            
+            setInterval(function() {
+            current = current + 1;
+            current = current % imageLength;
+            moveTo();
+            }, 3000);
+        })
+       
+    </script>
+</head>
+<body>
+    <div class="summer">
+    <div class="image">
+    <img class="image" src="images/summer1.jpg">
+    <img class="image" src="images/summer2.jpg">
+    <img class="image" src="images/summer3.jpg">
+    <img class="image" src="images/summer4.jpg">
+</div>
+</div>
+</body>
+</html>

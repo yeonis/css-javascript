@@ -1,0 +1,57 @@
+
+<html>
+    <head>
+        <title></title>
+        <script>
+       const max=function(array){
+        let output=array[0]
+        for (const data of array) {
+            if(output<data) {
+                output=data
+            }
+        }
+        return output
+       }
+
+       console.log(max([1,2,3,4]))
+
+       const max1=function(...array){
+        let output=array[0]
+        for(const data of array){
+        if(output<data){
+            output=data
+        }
+       }
+       return output
+    }
+        console.log(max1(1,2,3,4))
+
+    const max2 = function(first, ...rests){
+        let output
+        let items
+
+        if(Array.isArray(first)) {
+            output=first[0]
+            items=first
+        } else if (typeof(first) ==='number') {
+            output = first
+            items= rests
+        }
+        for (const data of items) {
+            if(output<data) {
+                output=data
+            }
+        }
+        return output
+    }
+
+    console.log(`max(배열): ${max2([1,2,3,4])}`)
+    console.log(`max(숫자, ...): ${max2(1,2,3,4)}`)
+
+       
+
+        </script> 
+    </head>
+    <body>        
+    </body>
+</html>
